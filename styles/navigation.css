@@ -28,6 +28,8 @@ body.active {
   width: 100%;
   height: 10px;
   background-color: white;
+  z-index: 100;
+
   top: 0;
   left: 0;
   margin: 0;

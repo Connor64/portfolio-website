@@ -1,0 +1,140 @@
+body {
+  overflow-x: hidden;
+}
+
+body.active {
+  overflow-y: hidden;
+}
+
+#navbar {
+  z-index: 1;
+  position: fixed;
+  top: 0%;
+  width: 100%;
+  height: 3em;
+  background-color: white;
+  /* background-color: var(--blue); */
+  margin: 0;
+  left: 0;
+  /* box-shadow: 0 1px 10px 2px rgba(0, 0, 0, 0.5); */
+}
+
+#spacer {
+  position: relative;
+  top: 0%;
+  width: 100%;
+  height: 3em;
+}
+
+#navbar ul li {
+  display: none;
+}
+
+#sidebar {
+  z-index: 3;
+  top: 0%;
+  position: fixed;
+  width: 50%;
+  height: 100%;
+  background-color: gray;
+  right: -50%;
+  transition: all 0.25s ease-in-out;
+}
+
+#sidebar.active {
+  right: 0%;
+  /* box-shadow: -150px 0 rgba(0, 0, 0, 0.5); */
+}
+
+#sidebar ul li {
+  list-style: none;
+  color: white;
+  font-size: 1em;
+  padding: 1em 1em;
+}
+
+#toggle {
+  position: inherit;
+  right: 1em;
+  top: 0.875em;
+  cursor: pointer;
+  transition: inherit;
+  /* top: 30px; */
+  /* left: 330px; */
+}
+
+#toggle.active {
+  right: 51%;
+}
+
+#toggle span {
+  width: 2em;
+  height: 0.25em;
+  /* background: rgb(0, 59, 163);; */
+  background-color: var(--blue);
+  display: block;
+  transition: inherit;
+}
+
+#shadow {
+  /* display: none; */
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.25);
+  transition: all 0.25s ease-in-out;
+  z-index: 2;
+}
+
+#shadow.active {
+  opacity: 1;
+}
+
+#toggle span.active {
+  width: 1.3107em;
+}
+
+#toggle span.active:nth-of-type(1) {
+  transform: rotate(45deg);
+  transform-origin: bottom left;
+}
+
+#toggle span.active:nth-of-type(2) {
+  transform: scaleX(0);
+  transform-origin: center;
+}
+
+#toggle span.active:nth-of-type(3) {
+  transform: rotate(-45deg);
+  transform-origin: top left;
+}
+
+@media screen and (min-width: 768px) {
+  #sidebar {
+    display: none;
+  }
+
+  #shadow {
+    display: none;
+  }
+
+  #navbar {
+    display: flex;
+  }
+
+  #navbar ul {
+    position: inherit;
+    right: 0;
+  }
+
+  #navbar ul li {
+    display: inline-block;
+    color: white;
+    background-color: gray;
+    padding: 0.2em;
+    margin-right: 3em;
+  }
+}

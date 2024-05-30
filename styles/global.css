@@ -1,0 +1,8 @@
+:root {
+  --blue: rgb(75, 115, 95);
+}
+
+h1 {
+  font-family: 'Fraunces', Georgia, 'Times New Roman', Times, serif;
+  color: var(--blue)
+}

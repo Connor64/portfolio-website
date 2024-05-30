@@ -5,17 +5,22 @@
   background-position-y: bottom;
   background-size: 100%;
 
-  margin-top: 10%;
   margin-left: auto;
   margin-right: auto;
   position: relative;
 }
 
 #background-blob img {
+  /* background-image: url(../images/connor_crop2_color.png); */
+  /* background-repeat: no-repeat; */
+  /* background-position: center; */
+  /* background-size: 100%; */
+
   mask-image: url(../images/rect1_mask.svg);
   mask-repeat: no-repeat;
   mask-position: bottom;
   mask-size: 100%;
+  transform: translateY(4px);
 
   width: 100%;
 }

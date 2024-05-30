@@ -1,8 +1,18 @@
 :root {
-  --blue: rgb(75, 115, 95);
+  --green: rgb(75, 115, 95);
+  --light-green: rgb(238, 248, 247);
+}
+
+#container {
+  width: 95%;
+  height: 100vh;
+  background-color: var(--light-green);
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
 }
 
 h1 {
   font-family: 'Fraunces', Georgia, 'Times New Roman', Times, serif;
-  color: var(--blue)
+  color: var(--green)
 }

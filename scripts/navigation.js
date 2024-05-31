@@ -63,6 +63,12 @@ function fadeScroll() {
 $(document).ready(function() {
   // Called once when document is loaded
   fadeScroll();
+  
+  $(window).resize(function() {
+    // Called whenever the window is resized
+    fadeScroll();
+  });
+
   $(window).scroll(function() {
     // Called whenever the user scrolls (after document is loaded)
     fadeScroll();

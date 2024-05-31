@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
 
     <title>Connor Colbert</title>
   </head>
@@ -44,18 +45,23 @@
       </ul>
     </div>
 
+    <!-- The main container of the website (exists for styling) -->
     <div id="container">
       <div id="spacer"></div>
   
-      <div id="background-blob">
+      <div id="background-blob" class="fade-in">
         <img src="images/connor_crop3.png"/>
       </div>
   
-      <h1>Hi, I'm Connor.</h1>
+      <h1 class="fade-in" style="--delay: 0.2s;">Hi, I'm Connor.</h1>
+      <h3 class="fade-in" style="--delay: 0.25s">
+        I'm a freelance software engineer studying computer
+        science at Purdue University.
+      </h3>
       
     </div>
     
-    <script src="scripts/navigation.js"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha384-1H217gwSVyLSIfaLxHbE7dRb3v4mYCKbpQvzx0cegeju1MVsGrX5xXxAvs/HgeFs" crossorigin="anonymous"></script>
+    <script src="scripts/navigation.js"></script>
   </body>
 </html>

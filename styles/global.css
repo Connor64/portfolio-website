@@ -1,3 +1,15 @@
+body {
+  position: static;
+  overflow-x: hidden;
+}
+
+body.active {
+  position: fixed; 
+  z-index: 0;
+  top: var(--st);
+  overflow-y: scroll; 
+}
+
 :root {
   --green: rgb(75, 115, 95);
   --light-green: rgb(238, 248, 247);
@@ -14,5 +26,26 @@
 
 h1 {
   font-family: 'Fraunces', Georgia, 'Times New Roman', Times, serif;
-  color: var(--green)
+  color: var(--green);
+}
+
+h3 {
+  font-family: 'Josefin Sans';
+  color: var(--green);
+}
+
+.fade-in {
+  --delay: 0s;
+  opacity: 0;
+  transition-delay: 0s;
+  transform: translateY(5vh);
+  visibility: hidden;
+  transition: all 0.5s ease-out;
+  transition-delay: calc(0.1s + var(--delay));
+}
+
+.fade-in.is-visible {
+  opacity: 1;
+  transform: none;
+  visibility: visible;
 }

@@ -37,19 +37,19 @@ h3 {
 }
 
 .fade-in {
-  /* --delay: 0s;
+  --delay: 0s;
   opacity: 0;
   transition-delay: 0s;
   transform: translateY(5vh);
   visibility: hidden;
   transition: all 0.5s ease-out;
-  transition-delay: calc(0.1s + var(--delay)); */
+  transition-delay: calc(0.1s + var(--delay));
 }
 
 .fade-in.is-visible {
-  /* opacity: 1;
+  opacity: 1;
   transform: none;
-  visibility: visible; */
+  visibility: visible;
 }
 
 @media screen and (min-width: 768px) {

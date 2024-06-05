@@ -4,15 +4,16 @@ body {
 }
 
 body.active {
-  position: fixed; 
+  position: fixed;
   z-index: 0;
   top: var(--st);
-  overflow-y: scroll; 
+  overflow-y: scroll;
 }
 
 :root {
   --green: rgb(75, 115, 95);
   --light-green: rgb(238, 248, 247);
+  --dark-green: rgb(53, 82, 67);
   --mobile-width: 768px;
 }
 
@@ -36,6 +37,22 @@ h3 {
   font-weight: 300;
 }
 
+p {
+  color: var(--green);
+  font-family: 'Josefin Sans';
+  font-weight: 300;
+  font-size: 1.1em;
+}
+
+p b {
+  font-weight: 600;
+}
+
+#sub-container {
+  width: 90%;
+  margin: auto;
+}
+
 .fade-in {
   --delay: 0s;
   opacity: 0;
@@ -52,11 +69,35 @@ h3 {
   visibility: visible;
 }
 
+.underlineable {
+  --underline: white;
+  text-decoration: none;
+  background-image: linear-gradient(var(--underline), var(--underline));
+  background-size: 0% 0.1em;
+  background-position-y: 100%;
+  background-position-x: 0%;
+  background-repeat: no-repeat;
+  transition: background-size 0.2s ease-in-out;
+}
+
+.underlineable:hover {
+  background-size: 100% 0.1em;
+}
+
 @media screen and (min-width: 768px) {
   h1 {
     font-size: 4vw;
   }
+
   h3 {
     font-size: 2.5vw;
+  }
+
+  p {
+    font-size: 1.5vw;
+  }
+
+  #sub-container p {
+    width: 50%;
   }
 }

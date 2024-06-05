@@ -20,12 +20,34 @@
     <div id="top-border"></div>
 
     <div id="navbar">
-      <ul>
-        <li><a href="index.html">home</a></li>
-        <li><a href="index.html">contact</a></li>
-        <li><a href="index.html">projects</a></li>
-        <li><a href="index.html">about</a></li>
-      </ul>
+      <div id="logo-container">
+        <h2 id="logo-text">
+          <a style="text-decoration: none; color: inherit;" href="">
+            &lt;c<span id="logo-hide">onnor&nbsp;</span>c<span id="logo-hide">olbert</span>&gt;
+          </a>
+        </h2>
+      </div>
+
+      <!-- spacer -->
+      <div id="nav-spacer" style="flex: 1;"></div>
+
+      <div id="link-container">
+        <a href="index.html" class="hoverable-text">home</a>
+        <a href="index.html" class="hoverable-text">contact</a>
+        <a href="index.html" class="hoverable-text">projects</a>
+        <a href="index.html" class="hoverable-text">about</a>
+
+        <a href="https://github.com/Connor64" class="hoverable-svg">
+          <img src="images/github-logo-green.svg">
+        </a>
+        <a href="https://www.linkedin.com/in/j-connor-colbert/" class="hoverable-svg">
+          <img src="images/linkedin-logo-green.svg">
+        </a>
+        <a href="" class="hoverable-svg">
+          <img src="images/email-icon-green.svg">
+        </a>
+      </div>
+      
     </div>
 
     <div id="shadow"></div>
@@ -37,12 +59,17 @@
         <span style="margin-top: 0.25em;"></span>
       </div>
 
-      <ul>
-        <li><a href="index.html">home</a></li>
-        <li><a href="index.html">contact</a></li>
-        <li><a href="index.html">projects</a></li>
-        <li><a href="index.html">about</a></li>
-      </ul>
+      <div id="link-container">
+        <div class="sidebar-text"><a class="underlineable" href="index.html">home</a></div>
+        <div class="sidebar-text"><a class="underlineable" href="index.html">contact</a></div>
+        <div class="sidebar-text"><a class="underlineable" href="index.html">projects</a></div>
+        <div class="sidebar-text"><a class="underlineable" href="index.html">about</a></div>
+        <div id="logos">
+          <a><img src="images/github-logo-white.svg"></a>
+          <a><img src="images/linkedin-logo-white.svg"></a>
+          <a><img src="images/email-icon-white.svg"></a>
+        </div>
+      </div>
     </div>
 
     <!-- The main container of the website (exists for styling) -->
@@ -62,8 +89,21 @@
           science at Purdue University.
         </h3>
         </div>
-        
       </div>
+      
+      <br>
+
+      <div id="sub-container">
+        <hr class="fade-in" style="margin-top: 50px; color: var(--green)">
+        <br>
+        <br>
+        <h1 class="fade-in">Let's work together!</h1>
+
+        <p class="fade-in">Whether you need someone for <b>software 
+          engineering</b>, <b>game design</b>, or even 
+          <b>web development</b>, I can fulfill your needs.</p>
+      </div>
+
     </div>
     
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha384-1H217gwSVyLSIfaLxHbE7dRb3v4mYCKbpQvzx0cegeju1MVsGrX5xXxAvs/HgeFs" crossorigin="anonymous"></script>

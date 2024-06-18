@@ -30,6 +30,16 @@ function show() {
 }
 
 /**
+ * Delays how quickly a link redirects the user after clicking it.
+ * 
+ * @param {link} URL The link that the user will be redirected to
+ * @param {integer} time Time which the link is delayed (in milliseconds)
+ */
+function delay(URL, time) {
+  setTimeout(function() { window.location = URL }, time);
+}
+
+/**
  * Checks if an element is within the viewport.
  * 
  * @param {element} el - Element to check.

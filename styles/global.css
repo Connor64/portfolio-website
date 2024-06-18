@@ -14,6 +14,7 @@ body.active {
   --green: rgb(75, 115, 95);
   --light-green: rgb(238, 248, 247);
   --dark-green: rgb(53, 82, 67);
+  --orange: rgb(191, 115, 95);
   --mobile-width: 768px;
 }
 
@@ -27,6 +28,12 @@ body.active {
 }
 
 h1 {
+  font-family: 'Fraunces', Georgia, 'Times New Roman', Times, serif;
+  color: var(--green);
+}
+
+
+h2 {
   font-family: 'Fraunces', Georgia, 'Times New Roman', Times, serif;
   color: var(--green);
 }
@@ -87,6 +94,10 @@ p b {
 @media screen and (min-width: 768px) {
   h1 {
     font-size: 4vw;
+  }
+
+  h2 {
+    font-size: 3.25vw;
   }
 
   h3 {

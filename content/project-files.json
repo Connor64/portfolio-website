@@ -1,0 +1,16 @@
+{
+  "projects": [
+    {
+      "id": "deflexion-redux",
+      "name": "Deflexion Redux",
+      "thumbnail": "deflexion-thumbnail.png",
+      "caption": "A 2D space-shooter game written in C# using the Monogame/Microsoft XNA Framework."
+    },
+    {
+      "id": "world-pieces",
+      "name": "World Piexes",
+      "thumbnail": "world-pieces-thumbnail.png",
+      "caption": "An open-world 3D game demo with randomly generated terrain with marching cubes and perlin noise."
+    }
+  ]
+}

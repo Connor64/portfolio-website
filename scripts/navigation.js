@@ -51,7 +51,9 @@ function isElementInViewport (el) {
   var tolerance = 30;
 
   return (
-      rect.top + tolerance >= 0 &&
+      // not including first line so that if you have scrolled already then everything above where you are will have appeared
+      // rect.top + tolerance >= 0 &&
+
       rect.left  + tolerance >= 0 &&
       rect.bottom  - tolerance <= (window.innerHeight || document.documentElement.clientHeight) && /* or $(window).height() */
       rect.right  - tolerance <= (window.innerWidth || document.documentElement.clientWidth) /* or $(window).width() */

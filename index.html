@@ -124,38 +124,7 @@
         </p>
       </div>
 
-      <div class="content-panel" panel-id="homepage" style="margin-top: 0;">
-        <div class="fade-in">
-          <div class="project-panel">
-            <img src="images/debug_image.png">
-            <div class="caption">
-              <h3>Deflexion Redux</h3>
-              <p>caption</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="fade-in">
-          <div class="project-panel">
-            <img src="images/debug_image.png">
-            <div class="caption">
-              <h3>World Pieces</h3>
-              <p>caption</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="fade-in">
-          <div class="project-panel">
-            <img src="images/debug_image.png">
-            <div class="caption">
-              <h3>title</h3>
-              <p>caption</p>
-            </div>
-          </div>
-        </div>
-
-      </div>
+      <div class="content-panel" panel-id="homepage" style="margin-top: 0;"></div>
 
       <div class="header-panel">
         <h2 class="fade-in">Warning: Site still under construction!</h2>
@@ -175,6 +144,15 @@
     integrity="sha384-1H217gwSVyLSIfaLxHbE7dRb3v4mYCKbpQvzx0cegeju1MVsGrX5xXxAvs/HgeFs"
     crossorigin="anonymous"></script>
   <script src="scripts/navigation.js"></script>
+  <script src="scripts/project-load.js"></script>
+
+  <script>
+    loadProjectData().then(() => {
+      loadProject("deflexion-redux", "homepage");
+      loadProject("world-pieces", "homepage");
+    });
+  </script>
+
 </body>
 
 </html>

@@ -1,27 +1,45 @@
-const projectData = [];
+var projectData = [];
 
-window.onload = function() {
-    fetch("content/project-files.json")
+/**
+ * Loads all project data into memory on the load of the website.
+ */
+function loadProjectData() {
+    // if (projectData.length > 0) return Promise.resolve;
+
+    return fetch("content/project-files.json")
         .then((response) => response.json())
         .then((json) => {
             for (let i = 0; i < json.projects.length; i++) {
                 projectData[json.projects[i].id] = json.projects[i];
+                console.log(projectData[json.projects[i].id].name);
             }
         });
 }
 
+/**
+ * Loads a specific project into a project container html object.
+ *
+ * @param {string} projectID
+ * @param {string} contentPanelName
+ * @returns
+ */
 function loadProject(projectID, contentPanelName) {
+    // console.log("hahaha!!! noo!!!");
+    // if (projectData.length <= 0) return false;
+
     var container;
     var galleries = document.querySelectorAll("div[panel-id]");
     for (var i = 0; i < galleries.length; i++) {
-        if (galleries[i].getAttribute("panel-name") == gallery) {
+        if (galleries[i].getAttribute("panel-id") == contentPanelName) {
             container = galleries[i];
             break;
         }
     }
 
     if (container == null) {
-        console.log("oops haha no container named " + contentPanelName + " exists");
+        console.log(
+            "oops haha no container named " + contentPanelName + " exists"
+        );
         return;
     }
 
@@ -46,7 +64,8 @@ function loadProject(projectID, contentPanelName) {
     panel.classList.add("project-panel");
 
     var img = document.createElement("img");
-    img.src = "images/" + file.thumbnail;
+    console.log("id: " + projectID);
+    img.src = "images/" + projectData[projectID].thumbnail;
 
     var text = document.createElement("div");
     text.classList.add("caption");
@@ -67,5 +86,5 @@ function loadProject(projectID, contentPanelName) {
 
     container.appendChild(fade);
 
-    
+    return true;
 }
